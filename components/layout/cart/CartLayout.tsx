@@ -4,7 +4,7 @@ import { Trash2 } from 'lucide-react-native';
 import cartStyle from '@/components/layout/cart/styles';
 import { Beer } from '@/utils/types';
 import { Counter } from '@/components/ui/Counter/Counter';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button/Button';
 
 type CartLayoutProps = {
   totalItems: number;

@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import { Plus, Minus } from 'lucide-react-native';
 import { Badge } from '../ui/Badge';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/Button/Button';
 import { IconButton } from '../ui/IconButton';
 
 interface ProductCardProps {
@@ -31,12 +31,10 @@ export function ProductCard({
       <View style={styles.imageContainer}>
         <Image source={{ uri: image }} style={styles.itemImage} />
         <View style={styles.stockBadge}>
-          <Badge variant="secondary">
-            {stock} available
-          </Badge>
+          <Badge variant="secondary">{stock} available</Badge>
         </View>
       </View>
-      
+
       <View style={styles.itemContent}>
         <View style={styles.itemHeader}>
           <View style={styles.titleContainer}>
@@ -45,7 +43,7 @@ export function ProductCard({
           </View>
           <Text style={styles.itemPrice}>{price}</Text>
         </View>
-        
+
         {quantity === 0 ? (
           <Button onPress={onAdd}>
             <View style={styles.addButtonContent}>
@@ -60,9 +58,9 @@ export function ProductCard({
               variant="secondary"
               onPress={() => onUpdateQuantity(quantity - 1)}
             />
-            
+
             <Text style={styles.quantity}>{quantity}</Text>
-            
+
             <IconButton
               icon={Plus}
               variant="secondary"

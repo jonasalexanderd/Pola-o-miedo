@@ -3,7 +3,7 @@ import homeStyles from '@/components/layout/home/styles';
 import { Image, Text, View } from 'react-native';
 import { Beer } from '@/utils/types';
 import { Counter } from '@/components/ui/Counter/Counter';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button/Button';
 
 type ProductItemProps = {
   beer: Beer;
